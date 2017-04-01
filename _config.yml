@@ -37,4 +37,4 @@ page_gen:
   - data: 'organisations'
     template: 'org_profile'
     name: 'name'
-    dir: 'people'
+    dir: 'organisations'
