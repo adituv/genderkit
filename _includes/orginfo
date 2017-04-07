@@ -1,0 +1,22 @@
+{% assign org = include.org %}
+
+<h1>{{ org.name }}</h1>
+
+<aside>
+<ul>
+<li>Website: <a href="{{ org.url }}">{{org.url}}</a></li>
+<li>Facebook: <a href="https://facebook.com/{{org.facebook}}">{{org.facebook}}</a></li>
+</ul>
+</aside>
+
+{% if org.facebookDescription != "" %}
+  {% assign desc = org.facebookDescription %}
+{% elsif org.twitterDescription != "" %}
+  {% assign desc = org.twitterDescription %}
+{% else %}
+  {% assign desc = "No description given." %}
+{% endif %}
+
+<section>
+{{ desc }}
+</section>

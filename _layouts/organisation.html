@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>{{ page.title }}</title>
+</head>
+
+<body>
+{% assign org = site.data.organisations | where: "name", page.organisation | first %}
+{% include orginfo org=org %}
+
+<p>{{ content }}</p>
+</body>
+</html>
