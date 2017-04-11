@@ -2,15 +2,18 @@ language: ruby
 rvm:
   - 2.3.3
 
-before_script:
-  - chmod +x ./deploy/cibuild.sh
+script: bundle exec jekyll build
 
-script: ./deploy/cibuild.sh
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: master
+  local_dir: _site
 
 env:
   global:
-    - ENCRYPTION_LABEL: 89f48081ad1f
-    - COMMIT_AUTHOR_EMAIL: "aditu.venyhandottir@gmail.com"
     - NOKOGIRI_USE_SYSTEM_LIBRARIES: true
 
 sudo: false
