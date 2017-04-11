@@ -1,5 +1,3 @@
 _site
 .sass-cache
 .jekyll-metadata
-deploy/deploy_key
-deploy/deploy_key.pub
