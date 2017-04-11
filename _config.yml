@@ -17,6 +17,9 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - "old/*"
+  - .travis.yml
+  - deploy
+  - vendor
 
 collections:
   articles:

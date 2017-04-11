@@ -1,0 +1,16 @@
+language: ruby
+rvm:
+  - 2.3.3
+
+before_script:
+  - chmod +x ./deploy/cibuild.sh
+
+script: ./deploy/cibuild.sh
+
+env:
+  global:
+    - ENCRYPTION_LABEL: 89f48081ad1f
+    - COMMIT_AUTHOR_EMAIL: "aditu.venyhandottir@gmail.com"
+    - NOKOGIRI_USE_SYSTEM_LIBRARIES: true
+
+sudo: false
